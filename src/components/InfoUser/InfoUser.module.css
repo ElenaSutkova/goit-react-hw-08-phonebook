@@ -1,0 +1,8 @@
+.div{
+    display: flex;
+    gap: 10px;
+}
+
+.button{
+    display: flex;
+}
