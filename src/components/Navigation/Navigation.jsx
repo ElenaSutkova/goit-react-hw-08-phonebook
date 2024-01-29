@@ -3,6 +3,7 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectToken, selectUser } from "Store/DataUser/userSelect";
+import styles from './Navigation.module.css'
 
 const Navigation = () => {
     const user = useSelector(selectUser);
@@ -10,9 +11,9 @@ const Navigation = () => {
 
     return (
         <>
-            <Navbar bg="black" variant="dark">
+            <Navbar>
                 <Container>
-                    <Navbar.Brand href="/goit-react-hw-08-phonebook/contacts">
+                    <Navbar.Brand href="/goit-react-hw-08-phonebook/contacts" className={styles.phonebook} style={{color: 'rgba( 0,0,0 , 0.65)', fontSize: '35px'}}>
                         Phonebook
                     </Navbar.Brand>
                     {!user && (
@@ -22,10 +23,10 @@ const Navigation = () => {
                                     Contacts
                                 </Nav.Link>
                             )}
-                            <Nav.Link to="signup" as={Link}>
+                            <Nav.Link to="signup" as={Link} className={styles.signup}>
                                 Sign Up
                             </Nav.Link>
-                            <Nav.Link to="/login" as={Link}>
+                            <Nav.Link to="/login" as={Link} className={styles.login}>
                                 Login
                             </Nav.Link>
                         </Nav>
@@ -34,11 +35,11 @@ const Navigation = () => {
                     <InfoUser className="d-flex flex-column" />
                 </Container>
             </Navbar>
-            <Container className="align-items-center d-flex flex-column justify-content-center">
+            <Container className={styles.container}>
                 {user ? (
-                    <h1>Welcome '{user.name}' your contacts</h1>
+                    <h1 className={styles.title}>Welcome '{user.name}' your contacts</h1>
                 ) : (
-                    <h1>Welcome guest please login</h1>
+                    <h1 className={styles.title}>Welcome Guest! Please login or register</h1>
                 )}
             </Container>
         </>

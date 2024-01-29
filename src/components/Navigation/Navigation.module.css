@@ -1,0 +1,46 @@
+.phonebook{
+    font-size: 70px;
+        font-weight: 600;
+        font-family: 'Roboto', sans-serif;
+        color: #E89D9D;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 0px #E89D9D,
+            1px 2px 0px #E89D9D,
+            1px 3px 0px #E89D9D,
+            1px 4px 0px #E89D9D,
+            1px 5px 0px #E89D9D,
+            1px 6px 0px #E89D9D,
+            1px 10px 5px rgba(16, 16, 16, 0.5),
+            1px 15px 10px rgba(16, 16, 16, 0.4),
+            1px 20px 30px rgba(16, 16, 16, 0.3),
+            1px 25px 50px rgba(16, 16, 16, 0.2);
+            list-style-type: none;
+}
+
+.signup{
+    color: #E89D9D;
+}
+
+.login{
+    color: #E89D9D;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title{
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.72;
+    text-align: center;
+    max-width: 595px;
+    height: 80px;
+    margin: 80px 0 80px 0;
+    color: #E89D9D;
+}
+/* className="align-items-center d-flex flex-column justify-content-center" */

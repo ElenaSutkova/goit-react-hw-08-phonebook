@@ -16,7 +16,7 @@ const InfoUser = () => {
         <div>
             {user && (
                 <div className={styles.div}>
-                    <Button className={styles.button} onClick={handleSubmit}>Log Out</Button>
+                    <Button  size="sm" variant="outline-secondary" onClick={handleSubmit}>Log Out</Button>
                 </div>
             )}
         </div>

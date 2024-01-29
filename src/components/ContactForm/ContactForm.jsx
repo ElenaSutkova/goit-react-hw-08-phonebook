@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Button} from "react-bootstrap";
 import { getContact } from "Store/Selectors";
 import { useDispatch, useSelector } from "react-redux";
 import { addContactsThunk, getContactsThunk } from "Store/ContactsThunk";
@@ -65,7 +66,7 @@ const ContactForm = () => {
                     required
                 />
             </label>
-            <button className={styles.button} type="submit">Add Contact</button>
+            <Button size="sm" variant="outline-secondary" type="submit" style={{display: 'block', margin: 'auto'}}>Add Contact</Button>
         </form>
     )
 }

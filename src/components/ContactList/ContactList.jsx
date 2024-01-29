@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getContact, getFilter } from "Store/Selectors";
 import { delContactsThunk } from "Store/ContactsThunk";
 import styles from './ContactList.module.css'
+import { Button} from "react-bootstrap";
 
 const ContactList = function () {
     const dispatch = useDispatch();
@@ -22,13 +23,14 @@ const ContactList = function () {
                 <li className={styles.item} key={id}>
                     <p className={styles.name}>
                         {name}:{number}
-                        <button
+                        <Button
+                            size="sm" variant="outline-secondary"
                             data-id={id}
                             onClick={() => dispatch(delContactsThunk(id))}
                             className={styles.button}
                             type="button">
                             Delete
-                        </button>
+                        </Button>
                     </p>
                 </li>
             ))}

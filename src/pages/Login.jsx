@@ -3,6 +3,7 @@ import { Container, Form, Button } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { loginThunk } from "Store/DataUser/userThunk";
 
+
 const Login = () => {
     const dispatch = useDispatch();
     const [email, setEmail] = useState('');
@@ -36,11 +37,12 @@ const Login = () => {
     };
 
     return (
-        <Container>
+        <Container style={{display: 'flex', alignItems: 'center', alignContent: 'center', justifyContent: 'center'}}>
             <Form onSubmit={handleOnSubmit}>
                 <Form.Group controlId="formBasicEmail">
                     <Form.Label>Email</Form.Label>
                     <Form.Control 
+                        style={{width: '300px', marginBottom: '20px'}}
                         onChange={handleChange}
                         name="email"
                         value={email}
@@ -51,6 +53,7 @@ const Login = () => {
                 <Form.Group controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
                     <Form.Control 
+                        style={{width: '300px', marginBottom: '20px'}}
                         onChange={handleChange}
                         name="password"
                         value={password}
@@ -58,7 +61,7 @@ const Login = () => {
                         placeholder="Enter your password"
                     />
                 </Form.Group>
-                <Button bg="black" variant="dark" type="submit"> Log in</Button>
+                <Button size="sm" variant="outline-secondary" type="submit"> Log in</Button>
             </Form>
         </Container>
     )
