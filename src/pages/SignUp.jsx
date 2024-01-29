@@ -1,4 +1,4 @@
-import { Button, Container, Form, FormGroup } from "react-bootstrap";
+import { Button, Container, Form } from "react-bootstrap";
 import { signUpThunk } from "Store/DataUser/userThunk";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
@@ -41,7 +41,7 @@ const SignUp = () => {
     return (
         <Container>
             <Form onSubmit={handleOnSubmit}>
-                <FormGroup controlId="formBasicEmail">
+                <Form.Group controlId="formBasicEmail">
                     <Form.Label>User Name</Form.Label>
                     <Form.Control
                         onChange={handleChange}
@@ -50,8 +50,8 @@ const SignUp = () => {
                         type="text"
                         placeholder="Enter your name"
                     />
-                </FormGroup>
-                <FormGroup controlId="formBasicEmail">
+                </Form.Group>
+                <Form.Group controlId="formBasicEmail">
                     <Form.Label>User Email</Form.Label>
                     <Form.Control
                         onChange={handleChange}
@@ -60,8 +60,8 @@ const SignUp = () => {
                         type="email"
                         placeholder="Enter your email"
                     />
-                </FormGroup>
-                <FormGroup controlId="formBasicPassword">
+                </Form.Group>
+                <Form.Group controlId="formBasicPassword">
                     <Form.Label>User Password</Form.Label>
                     <Form.Control
                         onChange={handleChange}
@@ -70,7 +70,7 @@ const SignUp = () => {
                         type="password"
                         placeholder="Enter your password"
                     />
-                </FormGroup>
+                </Form.Group>
                 <Button bg="black" variant="dark" type="submit">
                     Log in
                 </Button>

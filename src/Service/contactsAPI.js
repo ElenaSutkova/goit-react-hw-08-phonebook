@@ -5,12 +5,12 @@ export const backAPI = axios.create({
 });
 
 export const getContacts = async () => {
-    const { data } = await backAPI.get(`/contacts`)
+    const { data } = await backAPI.get('/contacts')
     return data
 };
 
 export const addContacts = async contact => {
-    const { data } = await backAPI.post(`/contacts`, contact)
+    const { data } = await backAPI.post('/contacts', contact)
     return data
 };
 

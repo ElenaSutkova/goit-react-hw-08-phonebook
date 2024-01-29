@@ -55,7 +55,7 @@ const ContactForm = () => {
             </label>
             <label className={styles.label}>Number
                 <input
-                    type="text"
+                    type="tel"
                     name="number"
                     placeholder="Enter a number"
                     className={styles.input}

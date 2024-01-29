@@ -16,7 +16,6 @@ export const signUpUser = async credentials => {
 
 export const loginUser = async credentials => {
     const { data } = await backAPI.post('users/login', credentials)
-    console.log(data)
     return data
 };
 
