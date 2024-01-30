@@ -22,7 +22,7 @@ const ContactList = function () {
             {filteredContacts.map(({ id, name, number }) => (
                 <li className={styles.item} key={id}>
                     <p className={styles.name}>
-                        {name}:{number}
+                        {name}: {number}
                         <Button
                             size="sm" variant="outline-secondary"
                             data-id={id}

@@ -49,7 +49,7 @@ const ContactForm = () => {
                     placeholder="Enter a name"
                     className={styles.input}
                     value={name}
-                    pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+                    // pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
                     onChange={handleChange}
                     required
                 />
@@ -61,7 +61,7 @@ const ContactForm = () => {
                     placeholder="Enter a number"
                     className={styles.input}
                     value={number}
-                    pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+                    // pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
                     onChange={handleChange}
                     required
                 />
