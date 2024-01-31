@@ -70,6 +70,8 @@ const SignUp = () => {
                         onChange={handleChange}
                         name="password"
                         value={password}
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{7,}"
+                        title="The password cannot be less than seven characters and must contain at least one number, one lowercase and one uppercase Latin letter."
                         type="password"
                         placeholder="Enter your password"
                     />
